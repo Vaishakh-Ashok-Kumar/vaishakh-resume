@@ -1,14 +1,14 @@
 /* ======= Base ======= */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', 'Open Sans', 'Roboto', sans-serif;
   color: $text-color-secondary;
-  background: $smoky-white;
+  background: url('/assets/images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   font-size: 14px;
   padding: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 h1,
 h2,
 h3,
@@ -40,7 +40,11 @@ p {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 .sidebar-wrapper {
@@ -70,18 +74,6 @@ p {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
-  }
-  .profile {
-    margin-bottom: 15px;
-  }
-
-  .avatar {
-    //used for profile image
-    max-width: 100px;
-    margin-bottom: 15px;
-    border: 0px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
   .contact-list {
     .fas,
@@ -147,16 +139,28 @@ p {
       }
     }
   }
-
-  .interests-list {
-    margin-bottom: 0;
-    li {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+  .skills-section {
+    margin-top: 20px;
   }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;    
+      padding: 0;           
+      margin: 0;             
+    }
+
+    .skill-badge {
+      background-color: #e0f2f1;
+      color: #00796b;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .main-wrapper {
@@ -178,7 +182,6 @@ p {
   }
 
   .experiences-section,
-  .recommendations-section,
   .educations-section {
     .item {
       margin-bottom: 30px;
@@ -193,8 +196,7 @@ p {
   }
   .job-title,
   .degree,
-  .cert-title,
-  .recommendation-person {
+  .cert-title {
     color: $text-color;
     font-size: 16px;
     margin-top: 0;
@@ -203,16 +205,29 @@ p {
     flex: 75%;
   }
  
-  .time,
-  .cert-url {
+  .time
+   {
     position: absolute;
     right: 0;
     top: 0;
     color: $text-grey;
     flex: 25%;
   }
+  .cert-url 
+  {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex: 25%;
+    color: #0066cc;
+    text-decoration: underline;
+
+    &:hover 
+    {
+      color: #004999;
+    }
+  }
   .company,
-  .recommendation-role,
   .university,
   .cert-org {
     margin-bottom: 10px;
@@ -233,54 +248,6 @@ p {
     .item {
       margin-bottom: 15px;
     }
-  }
-  .oss-section {
-    .intro {
-      margin-bottom: 30px;
-    }
-    .item {
-      margin-bottom: 15px;
-    }
-  }
-
-  .publication-title {
-    font-size: 16px;
-    font-weight: 400;
-    color: $text-color;
-    margin-bottom: 1px;
-  }
-  .publication-authors {
-    font-style: italic;
-    color: $text-grey;
-    margin-bottom: 1px;
-  }
-  .publications-section {
-    .intro {
-      margin-bottom: 30px;
-    }
-    .item {
-      margin-bottom: 15px;
-    }
-  }
-}
-
-.skillset {
-  .item {
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-  .level-title {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-  .level-bar {
-    height: 12px;
-    background: $smoky-white;
-  }
-  .level-bar-inner {
-    height: 12px;
-    background: lighten($theme-color, 15%);
   }
 }
 
