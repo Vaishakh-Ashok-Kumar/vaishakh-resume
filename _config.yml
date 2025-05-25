@@ -10,7 +10,7 @@ title: Vaishakh's Resume
 
 description: A beautiful Jekyll theme for creating resume
 # Style will be applied only after restarting the build or serve. Just choose one of the options.
-theme_skin: grey # blue turquoise green berry orange ceramic teal oceanstale grey cherry
+theme_skin: oceanstale # blue turquoise green berry orange ceramic teal oceanstale grey cherry
 chrome_mobile_color: #use hex colors (ex:#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
 
 # Sass/SCSS
